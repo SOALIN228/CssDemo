@@ -1,0 +1,46 @@
+.frankButton {
+    box-sizing: border-box;
+    display: inline-block;
+    background: none;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-decoration: none;
+    font-size: 14px;
+    border: none;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.frankButton:hover {
+    background: #e5e5e5;
+}
+
+.frankButton:focus {
+    background: #e5e5e5;
+    outline: none;
+}
+
+.frankButton .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+    margin-left: -5px;
+    margin-top: -5px;
+    transition: transform .5s;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.frankButton .circle.active {
+    transform: scale(7);
+    visibility: visible;
+}
